@@ -16,11 +16,11 @@ import { AdminLogin } from '../models/admin-login.model';
 })
 export class LoginComponent implements OnInit {
 
-  createAdmin = new AdminFull('', '', '', '');
+  createAdmin = new AdminFull("", "", "", "");
   createForm: FormGroup;
   errorModal: object = {
-    errorTitle: 'Error',
-    errorText: 'Please fill in correct credentials'
+    errorTitle: "Error",
+    errorText: "Please fill in correct credentials"
   }
   visibility = true;
 
@@ -33,20 +33,20 @@ export class LoginComponent implements OnInit {
    */
   ngOnInit() {
     this.createForm = this.formBuilder.group({
-      firstName: ['', [
+      firstName: ["", [
         Validators.required,
       ]
       ],
-      lastName: ['', [
+      lastName: ["", [
         Validators.required,
       ]
       ],
-      email: ['', [
+      email: ["", [
         Validators.required,
         Validators.email
       ]
       ],
-      password: ['', [
+      password: ["", [
         Validators.required,
         Validators.minLength(10)
       ]
@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
     if (this.authService.admins.find(user => user.email == this.email.value && user.password == this.password.value)) {
       new AdminLogin(this.email.value, this.password.value);
       this.authService.login(this.email.value);
-      this.router.navigate(['dashboard']);
+      this.router.navigate(["dashboard"]);
     }
   }
 
@@ -90,13 +90,13 @@ export class LoginComponent implements OnInit {
   * Getter for easier access to our email form field.
   */
   get email() {
-    return this.createForm.get('email');
+    return this.createForm.get("email");
   }
 
   /**
   * Getter for easier access to our password form field.
   */
   get password() {
-    return this.createForm.get('password');
+    return this.createForm.get("password");
   }
 }

@@ -31,9 +31,9 @@ export class UsersListComponent implements OnInit {
    */
   getColor() {
     if (this.switchColor) {
-      return 'green';
+      return "green";
     } else {
-      return 'red';
+      return "red";
     }
   }
 }

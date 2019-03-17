@@ -16,7 +16,7 @@ export class RouteGuardService implements CanActivate {
    * with the key name user, otherwise it will return true.
    */
   canActivate(): boolean {
-    if (localStorage.getItem('user') == null) {
+    if (localStorage.getItem("user") == null) {
       return false;
     }
     return true;

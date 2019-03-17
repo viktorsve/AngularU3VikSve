@@ -27,6 +27,6 @@ export class UserListItemComponent implements OnInit {
    * list item being clicked.
    */
   navigate(input): void {
-    this.router.navigate(['/user', input]);
+    this.router.navigate(["/user", input]);
   }
 }

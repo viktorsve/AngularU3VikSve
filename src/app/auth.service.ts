@@ -12,15 +12,15 @@ export class AuthService {
 
   loggedUser: string;
   public admins: AdminFull[] = [{
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@email.com',
-    password: '1234567890'
+    firstName: "John",
+    lastName: "Doe",
+    email: "john.doe@email.com",
+    password: "1234567890"
   }, {
-    firstName: 'Kylie',
-    lastName: 'Johnson',
-    email: 'kylie.johnson@email.com',
-    password: '0987654321'
+    firstName: "Kylie",
+    lastName: "Johnson",
+    email: "kylie.johnson@email.com",
+    password: "0987654321"
   }];
 
   constructor() { }
@@ -29,7 +29,7 @@ export class AuthService {
    * Returns the key value of the user item.
    */
   checkIfLoggedIn() {
-    return localStorage.getItem('user');
+    return localStorage.getItem("user");
   }
 
   /**
@@ -37,7 +37,7 @@ export class AuthService {
    * property to the user parameter.
    */
   login(user) {
-    localStorage.setItem('user', user);
+    localStorage.setItem("user", user);
     this.loggedUser = user;
   }
 
