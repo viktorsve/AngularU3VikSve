@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-center">
-    <div *ngIf="authService.loggedUser; else loggedOut" class="col-4 bg-light">
+    <div *ngIf="authService.checkIfLoggedIn(); else loggedOut" class="col-4 bg-light">
       <div class="form-group">
         <h4>You are already logged in</h4>
       </div>
