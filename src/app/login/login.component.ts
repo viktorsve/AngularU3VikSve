@@ -61,8 +61,8 @@ export class LoginComponent implements OnInit {
   * to the dashboard.
   */
   login(): void {
-    new AdminLogin(this.email.value, this.password.value);
     if (this.authService.admins.find(user => user.email == this.email.value && user.password == this.password.value)) {
+      new AdminLogin(this.email.value, this.password.value);
       this.authService.login(this.email.value);
       this.router.navigate(['dashboard']);
     }
